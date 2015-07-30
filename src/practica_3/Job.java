@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Job, clase abstracta que representa un trabajo y de la cual heredan JobImage, JobCount y 
  * JobSTP. Los nodos reciben, dividen y realizan los trabajos, y envían objetos de esta clase 
@@ -5,6 +6,11 @@
  * la creación y preparación de fichero sobre el que se va a tratar de forma distribuida para cada 
  * trabajo. Además, implementa el  preprotocolo y postprotocolo del algoritmo de exclusión mutua 
  * distribuida de Neilsen-Mizuno.
+=======
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+>>>>>>> 595750985ce675c29d9b665b572c35618ce2dff2
  */
 package practica_3;
 
@@ -13,6 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
+<<<<<<< HEAD
  * @author Diego Blasco Quetglas
  */
 public abstract class Job {
@@ -20,6 +27,15 @@ public abstract class Job {
     protected MessageManager gs;
     
     public Job(MessageManager gs){
+=======
+ * @author dbq560
+ */
+public abstract class Job {
+    
+    protected GestorMensajes gs;
+    
+    public Job(GestorMensajes gs){
+>>>>>>> 595750985ce675c29d9b665b572c35618ce2dff2
         this.gs=gs;
     }
     public Job(){
@@ -28,11 +44,15 @@ public abstract class Job {
     
     public abstract Job[] calcJob(int n_div);
     public abstract void realizeJob(Job job);
+<<<<<<< HEAD
     protected abstract void createFile();
     
     /**
      * Preprotocolo exclusión mutua distribuida.
      */
+=======
+    
+>>>>>>> 595750985ce675c29d9b665b572c35618ce2dff2
     protected void DEMPreprotocol(){
         try {
             gs.mutex_em.acquire();
@@ -53,9 +73,13 @@ public abstract class Job {
             Logger.getLogger(Node.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+<<<<<<< HEAD
    /**
     * Postprotocolo exclusión mutua distribuida
     */
+=======
+   
+>>>>>>> 595750985ce675c29d9b665b572c35618ce2dff2
     protected void DEMPostprotocol(){
         try {
             gs.mutex_em.acquire();
@@ -72,11 +96,19 @@ public abstract class Job {
         }
     }
 
+<<<<<<< HEAD
     public void setGs(MessageManager gs) {
         this.gs = gs;
     }
 
     public MessageManager getGs() {
+=======
+    public void setGs(GestorMensajes gs) {
+        this.gs = gs;
+    }
+
+    public GestorMensajes getGs() {
+>>>>>>> 595750985ce675c29d9b665b572c35618ce2dff2
         return gs;
     }
     

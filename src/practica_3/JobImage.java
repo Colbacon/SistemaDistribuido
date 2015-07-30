@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * JobImage, extensión de Job, representa un trabajo de difuminado de imagen. Se encarga de:
  * -Crear un fichero que será la copia de la imagen original en formato PNG. Sobre esta copia 
@@ -188,5 +189,18 @@ public class JobImage extends Job{
         return xEnd;
     }
    
+=======
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package practica_3;
+
+/**
+ *
+ * @author dbq560
+ */
+public class JobImage {
+>>>>>>> 595750985ce675c29d9b665b572c35618ce2dff2
     
 }
